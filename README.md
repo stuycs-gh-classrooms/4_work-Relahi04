@@ -1,5 +1,5 @@
 # Avator
-### Name: Rifah Elahi
+### Name: Rifah Elahi (Group Era)
 ### Class Period: 4
 ---
 float move_right = 0;
