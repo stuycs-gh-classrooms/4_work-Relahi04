@@ -1,4 +1,4 @@
-# Work For NeXT CS
+# Avator
 ### Name: Rifah Elahi
 ### Class Period: 4
 ---
