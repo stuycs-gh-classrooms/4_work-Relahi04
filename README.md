@@ -55,4 +55,3 @@ void mouseClicked() {
   println ("Mouse X Position: "+ mouseX +", Mouse Y Position: " + mouseY);
 }
 
-
