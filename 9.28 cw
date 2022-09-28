@@ -1,0 +1,25 @@
+void setup () { 
+  size (500, 500); 
+  background (0); 
+  int nextx; // u can use this inside the curly braces. this means u can reuse variables.  
+  
+  //drawLightnigh (int(random(0, 125)), 0, 25); 
+  //drawLightning (int(random(125, 250)), 0, 50); 
+  drawLightning (int(random(250, 375)), 0, 75); // random chooses the starting coordinate and ensure that the lightnight volt never ovrelap. 
+  //drawLightning (int(random(357, 500)), 0, 100); // why is random being used? When you test your methods, you want to try to do things in a somewhat methodical way but if you're doing ranodm it's hard to do that so it's good to space things out a little bit.
+// where do you want to define a variable? VARIABLE SCOPE. a way to describe where in our code we can access a variable.  
+}
+void drawlightning (int x, int y, int numparts){
+  int count = 0; 
+  int nextx = x;
+  int nexty = y; 
+  int ystep = height/numParts
+  while (count < numParts) { 
+    nextx = int(random(x - 15, x + 15)); 
+    nexty = int(yste * count); 
+    println(nexty); 
+    line (x, y, nextx, nexty); 
+    count ++; 
+    }
+}
+    
