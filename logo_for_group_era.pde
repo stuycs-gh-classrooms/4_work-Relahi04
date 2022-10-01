@@ -1,9 +1,9 @@
-// grp logo Eric, Rifah, Avneil
+//  w04_flag 
 float move_right = 0;
 float move_up = 0;
 
 void setup() {
-  size(600,600);
+  size(600,600)
 }
 
 void draw(){
