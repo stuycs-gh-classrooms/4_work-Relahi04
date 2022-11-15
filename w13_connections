@@ -12,13 +12,13 @@ makeLines(xvals,yvals,50);
 }
 
 void makeLines (int [] xs, int [] ys, int points) {
-  for (int i=0; i<points;i=i+1){
-    if ((i>xs.length-1) || (i>ys.length-1)){
+  for (numPoints = 0; numPoints <points; numPoints = numPoints+1){
+    if ((numPoints >xs.length-1) || (numPoints >ys.length-1)){
       break;
     }
     else {
-     xs[i]= int (random (width)); 
-     ys[i]=int(random(height));
+     xs[numPoints]= int (random (width)); 
+     ys[numPoints]=int(random(height));
     }
   }
   for(int j=0;j<points;j=j+1){
