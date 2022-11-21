@@ -7,7 +7,7 @@ void setup() {
   score = 0;
 
   balls = new Ball [10] ;
-  setupBalls (); 
+  setupBalls(); 
 }//setup
 void setupBalls (){
   for (int i=0; i<balls.length; i++) {
@@ -18,15 +18,12 @@ void setupBalls (){
 void draw() {
   background(0);
   for (int i=0;i<balls.length;i++){
-  balls[i].display();
+  balls [i].display (); 
   balls[i].move();
   }
 }//draw
 
 
-
-  
-  
 void keyPressed() {
   if (key == ' ') {
     for (int r=0;r<balls.length;r++){
@@ -55,8 +52,8 @@ void keyPressed() {
       }
     }//right
   }//non ASCII keys
-}
-
+}//non ASCII keys
+   
 void mousePressed() {
   for (int r=0;r<balls.length;r++){
     if (balls[r].onBall(mouseX,mouseY)){
@@ -66,4 +63,3 @@ void mousePressed() {
     }
   }
 }
-  
