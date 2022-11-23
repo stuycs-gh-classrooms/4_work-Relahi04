@@ -3,11 +3,13 @@ class Ball {
   int cx, cy;
   int xvelocity, yvelocity;
   int radius;
-
+  color c; 
+  
   //constructor
   Ball() {
     radius = 20;
     reset();
+    c = SAFE_COLOR;
   }//default constructor
 
   void reset() {
@@ -18,6 +20,7 @@ class Ball {
   }//resetBall
 
   void display() {
+    fill (c); 
     circle(cx, cy, radius * 2);
   }//display
 
