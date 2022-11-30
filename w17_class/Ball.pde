@@ -15,14 +15,11 @@ class Ball {
   void setColor (color newc){
     c = newc; 
   }
-  boolean collisionCheck (Ball other){
-    if( dist(cx,cy,other.cx,other.cy)<=radius){
-      return true;
-    }
-    else if(cx==other.cx && cy==other.cy){
-      return true;
-    }
-    else{
+ boolean collisionCheck (Ball other) {
+    if (this != other) {
+      float d= dist(cx, cy, other.cx, other.cy);
+      return d <= 2 * radius;
+    } else {
       return false;
     }
   }
