@@ -1,4 +1,3 @@
-//State variable constants
 int DIRT = 0;
 int FIRE = 1;
 int BURNT = 2;
@@ -12,7 +11,7 @@ color GRASS_COLOR = #49B90D;
 
 //Driver variables
 boolean burning = false;
-float grassDensity = 75;
+int grassDensity = 75;
 int gridLength = 20;
 int numGrid = 10;
 Land grid[][];
@@ -22,9 +21,10 @@ void setup() {
   size(700, 350);
   frameRate(5);
   grid = new Land[numGrid][gridLength];
-  setupLand (Land [][], numLength, numGrid,  grassDensity); 
-  showLand (grid) ;
-  // land[][], int, int, float); 
+  setupLand(grid, numGrid, gridLength, grassDensity);
+
+  showLand(grid) ;
+  // land[][], int, int, float);
 }//setup
 
 void draw() {
@@ -36,12 +36,12 @@ void draw() {
   }
 }//draw
 
-void setupLand(Land[][] field, int numRows, int numPlots, float density) {
-  //figure out size of each plot of land
+void setupLand(Land[][] field, int numRows, int numPlots, float density){  //figure out size of each plot of land
+for (int r = 0; r < numRows; r++){
   int plotSize = width / numPlots;
 
   //instantiate each Land object
-  for (int i=0; i<field.length; i++) {
+  for (int i=0; i<field[r].length; i++) {
     int type = DIRT;
 
     //first Land object should be FIRE
@@ -55,9 +55,11 @@ void setupLand(Land[][] field, int numRows, int numPlots, float density) {
     }//grass land
 
     //creates a new land at (x, y) with size plotSize and type
-    field[int (density)][i] = new Land(i*plotSize, int(density) * plotSize, plotSize, type);
+    field [r][i] = new Land(i*plotSize, r*plotSize, plotSize, type);
   }//setup loop
+}
 }//setupLand
+
 
 void showLand(Land[][] field) {
   for (int r=0; r < field.length; r++) { //loop over each or the arrays
@@ -92,6 +94,6 @@ void keyPressed() {
   }//start burning
   else if (key == 'r') {
     burning = false;
-    setupLand(grid[0], gridLength, grassDensity, 2);
+  setupLand(grid, gridLength, numGrid, grassDensity);
+    }
   }
-}
