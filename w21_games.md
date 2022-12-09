@@ -20,3 +20,11 @@ purpose: Shoot the sapce invaders while avoid getting shot by them.
 Elements controlled by the player: The location of the rocket and when it shoots is controlled by the player. 
 
 Elements controlled by the computer: The randomness of the shots from the invaders and their position is controlled by the invader. 
+
+How does player control their element?: They can move the rocket and pick when to shoot or avoid their shot. 
+
+How do non-plaeyer elements behave: The space invaders move a block at a time and randomly fire thier shot. 
+
+Classes: Spaceship, space_invaders, fire; 
+
+Arrays: Similar to the last question, I'd create a 2d array for the space invaders. 
